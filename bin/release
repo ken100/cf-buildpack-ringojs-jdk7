@@ -15,6 +15,6 @@ EOF
 if [ ! -f $BUILD_DIR/Procfile ]; then
 cat <<EOF
 default_process_types:
-  web: ringo server.js
+  web: ringo server.js -p $PORT
 EOF
 fi
