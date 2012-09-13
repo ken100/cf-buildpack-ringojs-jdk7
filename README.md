@@ -21,3 +21,8 @@ Example usage:
     -----> Installing RingoJS..... done
 
 The buildpack will detect your app as a RingoJS project if it has a file called server.js. If you don't provide a Procfile, the build pack will default to launching your app with `ringo server.js`
+
+License
+---
+Copyright 2012 [Jock Murphy](http://jockmurphy.com).
+This work is licensed under a Creative Commons Attribution 3.0 Unported License.

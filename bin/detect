@@ -1,6 +1,10 @@
 #!/usr/bin/env bash
 # bin/use <build-dir>
 
+# This buildpack was created by Jock Murphy, jockmurphy.com, jock@jockmurphy.com
+# Copyright 2012 Jock Murphy
+# This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+
 if [ -f $1/server.js ]; then
    echo "RingoJS" && exit 0
 else
