@@ -20,4 +20,4 @@ Example usage:
     -----> RingoJS app detected
     -----> Installing RingoJS..... done
 
-The buildpack will detect your app as a RingoJS project if it has a file called app.js. If you don't provide a Procfile, the build pack will default to launching your app with `ringo app.js`
+The buildpack will detect your app as a RingoJS project if it has a file called server.js. If you don't provide a Procfile, the build pack will default to launching your app with `ringo server.js`

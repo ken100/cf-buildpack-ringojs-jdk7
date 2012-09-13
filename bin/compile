@@ -67,5 +67,5 @@ fi
 # Warn if no Procfile is present
 if [ ! -f Procfile ]; then
   echo "-----> No Procfile found. Will use the following default process: "
-  echo "       ringo app.js"
+  echo "       ringo server.js"
 fi
