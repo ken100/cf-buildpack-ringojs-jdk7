@@ -43,7 +43,7 @@ if [ ! -d "$BUILD_DIR/.ringojs" ]; then
   echo -n "-----> Installing ringojs build (to .ringojs)....."
   curl --max-time 320 --location $RINGOJS_URL | tar xz
   mv ringojs* .ringojs
-  rm '.ringojs/bin/*.cmd'
+  #rm '.ringojs/bin/*.cmd'
   cd $BUILD_DIR
   cp -r .ringojs $CACHE_DIR/.ringojs
   echo " done"
