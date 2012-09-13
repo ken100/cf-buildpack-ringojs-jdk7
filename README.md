@@ -9,7 +9,7 @@ Usage
 Example usage:
 
     $ ls
-    app.js
+    server.js
 
     $ heroku create --stack cedar --buildpack https://github.com/jockm/heroku-buildpack-ringojs-jdk7.git
 	
@@ -20,7 +20,7 @@ Example usage:
     -----> RingoJS app detected
     -----> Installing RingoJS..... done
 
-The buildpack will detect your app as a RingoJS project if it has a file called server.js. If you don't provide a Procfile, the build pack will default to launching your app with `ringo server.js`
+The buildpack will detect your app as a RingoJS project if it has a file called server.js. If you don't provide a Procfile, the build pack will default to launching your app with `ringo -m . server.js -p $PORT`
 
 License
 ---
