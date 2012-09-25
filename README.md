@@ -22,6 +22,10 @@ Example usage:
 
 The buildpack will detect your app as a RingoJS project if it has a file called server.js. If you don't provide a Procfile, the build pack will default to launching your app with `ringo -m . server.js -p $PORT`
 
+***NOTE:*** If you use a different filename for your application, you must still provide a file named `server.js` or you will get the following error message:
+
+> Heroku push rejected, no Cedar-supported app detected
+
 License
 ---
 Copyright 2012 [Jock Murphy](http://jockmurphy.com).
