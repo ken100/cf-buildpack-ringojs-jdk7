@@ -5,20 +5,25 @@
 # Copyright 2012 Jock Murphy
 # This work is licensed under a Creative Commons Attribution 3.0 Unported License.
 
-BUILD_DIR=$1
+#BUILD_DIR=$1
 
-cat <<EOF
----
-config_vars:
-  PATH: .jdk7/bin:.ringojs/bin:.tools:/usr/local/bin:/usr/bin:/bin
-  JAVA_OPTS: -Xmx384m
-addons:
-  shared-database:5mb
-EOF
+#cat <<EOF
+#---
+#config_vars:
+#  PATH: .jdk7/bin:.ringojs/bin:.tools:/usr/local/bin:/usr/bin:/bin
+#  JAVA_OPTS: -Xmx384m
+#addons:
+#  shared-database:5mb
+#EOF
 
-if [ ! -f $BUILD_DIR/Procfile ]; then
-cat <<EOF
-default_process_types:
-  web: ringo -m . server.js -p \$PORT
+#if [ ! -f $BUILD_DIR/Procfile ]; then
+#cat <<EOF
+#default_process_types:
+#  web: ringo -m . server.js -p \$PORT
+#EOF
+#fi
+
+cat << EOF
+addons: []
+default_process_types: {}
 EOF
-fi
