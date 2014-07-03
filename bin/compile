@@ -63,7 +63,7 @@ cat <<EOF > $BUILD_DIR/.profile.d/jdk.sh
 #!/usr/bin/env bash
 export JAVA_HOME="/home/vcap/app/.jdk7"
 export RINGOJS_HOME="/home/vcap/app/.ringojs"
-export PATH="$PATH:$JAVA_HOME/bin:$RINGOJS_HOME/bin"
+export PATH="$PATH:/home/vcap/app/.jdk7/bin:/home/vcap/app/.ringojs/bin"
 export JAVA_OPTS="-Xmx384m"
 export LANG="${LANG:-en_US.UTF-8}"
 
