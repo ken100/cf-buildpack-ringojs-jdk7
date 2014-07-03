@@ -53,13 +53,11 @@ if [ ! -d "$BUILD_DIR/.ringojs" ]; then
   echo " done"
 fi
 
-cd $BUILD_DIR
-
-echo $PATH
+#cd $BUILD_DIR
+cd /home/vcap/app
 
 #export JAVA_HOME="$BUILD_DIR/.jdk7"
 #export RINGOJS_HOME="$BUILD_DIR/.ringojs"
-
 export JAVA_HOME="/home/vcap/app/.jdk7"
 export RINGOJS_HOME="/home/vcap/app/.ringojs"
 
