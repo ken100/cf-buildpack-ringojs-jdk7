@@ -63,7 +63,7 @@ echo "#!/usr/bin/env bash\\n" > $BUILD_DIR/.profile.d/jdk.sh
 echo 'export JAVA_HOME="/home/vcap/app/.jdk7"\\n' >> $BUILD_DIR/.profile.d/jdk.sh
 echo 'export RINGOJS_HOME="/home/vcap/app/.ringojs"\\n' >> $BUILD_DIR/.profile.d/jdk.sh
 echo 'export PATH=$PATH:$JAVA_HOME/bin:$RINGOJS_HOME/bin"' >> $BUILD_DIR/.profile.d/jdk.sh
-
+cat $BUILD_DIR/.profile.d/jdk.sh
 
 echo "Path is set to"
 echo $PATH
