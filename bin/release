@@ -26,6 +26,5 @@
 cat << EOF
 addons: []
 config_vars: {}
-default_process_types:
-  web: ringo -m . server.js
+default_process_types: {}
 EOF
