@@ -7,8 +7,6 @@
 
 BUILD_DIR=$1
 
-echo "---------------------release---------------------"
-
 cat <<EOF
 ---
 config_vars:
