@@ -58,11 +58,25 @@ fi
 #export RINGOJS_HOME="$BUILD_DIR/.ringojs"
 #export PATH=$PATH:$JAVA_HOME/bin:$RINGOJS_HOME/bin
 mkdir "$BUILD_DIR/.profile.d"
-echo "#!/usr/bin/env bash" > $BUILD_DIR/.profile.d/jdk.sh
-echo 'export JAVA_HOME="/home/vcap/app/.jdk7"' >> $BUILD_DIR/.profile.d/jdk.sh
-echo 'export RINGOJS_HOME="/home/vcap/app/.ringojs"' >> $BUILD_DIR/.profile.d/jdk.sh
-echo 'export PATH=$PATH:$JAVA_HOME/bin:$RINGOJS_HOME/bin"' >> $BUILD_DIR/.profile.d/jdk.sh
-echo 'echo ".profile.d run"' >> $BUILD_DIR/.profile.d/jdk.sh
+
+cat <<EOF > $BUILD_DIR/.profile.d/jdk.sh
+#!/usr/bin/env bash
+export JAVA_HOME="/home/vcap/app/.jdk7"
+export RINGOJS_HOME="/home/vcap/app/.ringojs"
+export PATH="$PATH:$JAVA_HOME/bin:$RINGOJS_HOME/bin"
+export JAVA_OPTS="-Xmx384m"
+export LANG="${LANG:-en_US.UTF-8}"
+
+if [ -n "$VCAP_DEBUG_MODE" ]; then
+  if [ "$VCAP_DEBUG_MODE" = "run" ]; then
+    export JAVA_OPTS="$JAVA_OPTS -Xdebug -Xrunjdwp:transport=dt_socket,address=$VCAP_DEBUG_PORT,server=y,suspend=n"
+  elif [ "$VCAP_DEBUG_MODE" = "suspend" ]; then
+    export JAVA_OPTS="$JAVA_OPTS -Xdebug -Xrunjdwp:transport=dt_socket,address=$VCAP_DEBUG_PORT,server=y,suspend=y"
+  fi
+fi
+echo ".profile.d run"
+EOF
+
 cat $BUILD_DIR/.profile.d/jdk.sh
 
 echo "Path is set to"
