@@ -54,7 +54,7 @@ if [ ! -d "$BUILD_DIR/.ringojs" ]; then
 fi
 
 #cd $BUILD_DIR
-cd /home/vcap/app
+find $BUILD_DIR
 
 #export JAVA_HOME="$BUILD_DIR/.jdk7"
 #export RINGOJS_HOME="$BUILD_DIR/.ringojs"
