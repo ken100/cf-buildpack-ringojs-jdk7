@@ -58,6 +58,7 @@ fi
 #export RINGOJS_HOME="$BUILD_DIR/.ringojs"
 #export PATH=$PATH:$JAVA_HOME/bin:$RINGOJS_HOME/bin
 mkdir "$BUILD_DIR/.profile.d"
+touch $BUILD_DIR/.profile.d/jdk.sh
 echo "export JAVA_HOME="/home/vcap/app/.jdk7"\\nexport RINGOJS_HOME="/home/vcap/app/.ringojs"\\nexport PATH=$PATH:$JAVA_HOME/bin:$RINGOJS_HOME/bin" >> $BUILD_PATH/.profile.d/jdk.sh
 
 
