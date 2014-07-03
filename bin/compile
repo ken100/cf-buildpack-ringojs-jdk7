@@ -55,8 +55,14 @@ fi
 
 cd $BUILD_DIR
 
-export JAVA_HOME="$BUILD_DIR/.jdk7"
-export RINGOJS_HOME="$BUILD_DIR/.ringojs"
+echo $PATH
+
+#export JAVA_HOME="$BUILD_DIR/.jdk7"
+#export RINGOJS_HOME="$BUILD_DIR/.ringojs"
+
+export JAVA_HOME="/home/vcap/app/.jdk7"
+export RINGOJS_HOME="/home/vcap/app/.ringojs"
+
 export PATH=$PATH:$JAVA_HOME/bin:$RINGOJS_HOME/bin
 
 echo "Path is set to"
