@@ -54,7 +54,7 @@ if [ ! -d "$BUILD_DIR/.ringojs" ]; then
 fi
 
 #cd $BUILD_DIR
-find $BUILD_DIR
+find $BUILD_DIR -type d
 
 #export JAVA_HOME="$BUILD_DIR/.jdk7"
 #export RINGOJS_HOME="$BUILD_DIR/.ringojs"
