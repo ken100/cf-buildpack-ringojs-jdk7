@@ -27,5 +27,5 @@ cat << EOF
 addons: []
 config_vars: {}
 default_process_types:
-  web: ringo -m . server.js -p $PORT
+  web: ringo -m . server.js -p \$PORT
 EOF
