@@ -1,11 +1,7 @@
 #!/usr/bin/env bash
 # bin/release <build-dir>
 
-# This buildpack was created by Jock Murphy, jockmurphy.com, jock@jockmurphy.com
-# Copyright 2012 Jock Murphy
-# This work is licensed under a Creative Commons Attribution 3.0 Unported License.
-
-#BUILD_DIR=$1
+BUILD_DIR=$1
 
 #cat <<EOF
 #---
