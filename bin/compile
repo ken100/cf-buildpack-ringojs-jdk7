@@ -60,6 +60,7 @@ fi
 #echo "Path is set to"
 #echo $PATH
 
+# Update the PATH
 mkdir "$BUILD_DIR/.profile.d"
 cat <<EOF > $BUILD_DIR/.profile.d/jdk.sh
 #!/usr/bin/env bash
