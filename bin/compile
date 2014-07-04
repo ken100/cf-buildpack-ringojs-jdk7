@@ -23,8 +23,8 @@ if [ -d "$CACHE_DIR/.jdk7" ]; then
   echo "done"
 fi
 
-#OPENJDK7_URL="https://s3.amazonaws.com/heroku-jvm-langpack-java/openjdk7-u2-heroku-temaki.tar.gz"
-OPENJDK7_URL="http://www.java.net/download/jdk7u60/archive/b15/binaries/jre-7u60-ea-bin-b15-linux-x64-16_apr_2014.tar.gz"
+OPENJDK7_URL="https://s3.amazonaws.com/heroku-jvm-langpack-java/openjdk7-u2-heroku-temaki.tar.gz"
+#OPENJDK7_URL="http://www.java.net/download/jdk7u60/archive/b15/binaries/jre-7u60-ea-bin-b15-linux-x64-16_apr_2014.tar.gz"
 
 if [ ! -d "$BUILD_DIR/.jdk7" ]; then
   echo -n "-----> Installing OpenJDK7u2 build (to .jdk7)....."
