@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
 # bin/use <build-dir>
 
-if [ -f $1/server.js ]; then
+BUILD_DIR=$1
+
+if [ -f $BUILD_DIR/server.js ]; then
    echo "RingoJS" && exit 0
 else
   echo "no" && exit 1
