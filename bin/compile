@@ -8,6 +8,8 @@
 # fail fast
 set -e
 
+echo -n "heroku-buildpack-ringojs-jdk7 compile start"
+
 BIN_DIR=$(cd $(dirname $0); pwd) # absolute path
 # parse args
 BUILD_DIR=$1
@@ -82,3 +84,5 @@ EOF
 #  echo "-----> No Procfile found. Will use the following default process: "
 #  echo "       ringo server.js"
 #fi
+
+echo -n "heroku-buildpack-ringojs-jdk7 compile end"
